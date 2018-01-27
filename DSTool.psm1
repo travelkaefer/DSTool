@@ -1,7 +1,7 @@
 ################################################################
 # Author: Daniel Schwensen
 # E-Mail: daniel.schwensen@nielsen.com
-#askfahskdfhaskdhkf
+# Last update: 27.01.2018
 #
 #
 # Chapter 7.1
