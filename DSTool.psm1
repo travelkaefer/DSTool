@@ -3,7 +3,6 @@
 # E-Mail: daniel.schwensen@gmail.com
 # Last update: 27.01.2018
 #
-# Test in Modules
 # C 7.1
 
 function Get-DSSysteminfo() {
