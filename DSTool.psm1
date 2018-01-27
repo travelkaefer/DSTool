@@ -1,10 +1,10 @@
 ################################################################
 # Author: Daniel Schwensen
-# E-Mail: daniel.schwensen@nielsen.com
+# E-Mail: daniel.schwensen@gmail.com
 # Last update: 27.01.2018
 #
 #
-# Chapter 7.1
+# C 7.1
 
 function Get-DSSysteminfo() {
     <#
