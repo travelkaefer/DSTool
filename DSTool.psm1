@@ -34,12 +34,18 @@ C:\Retry.txt.
         [Parameter(Mandatory = $true)]
         [string[] ] $computerName,
 
-        [string] $errorLog = "c:\test.txt"
+        [string] $errorLog = "c:\DSSysteminfo.txt"
 
     )
 
     BEGIN { Write-Output "Log name is $errorLog"
     }
+
+    # If the function is called with nothing more than its parameters, meaning no information is piped into it from the
+    # pipeline, then the PROCESSS block runs one time for each object that was piped in from the pipeline.
+    #
+    #If the function is called with pipeline input, then the PROCESS block runs one time for each object
+    # that was piped in from the pipeline.
 
     PROCESS {
         foreach ($computer in $computerName) {
