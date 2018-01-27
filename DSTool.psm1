@@ -38,7 +38,7 @@ C:\Retry.txt.
 
     )
 
-    BEGIN { Write-Output "Log name is $errorLog"
+    BEGIN { Write-Output "Log name is $errorLog" -Verbose
     }
 
     # If the function is called with nothing more than its parameters, meaning no information is piped into it from the
@@ -73,4 +73,4 @@ C:\Retry.txt.
     END {
     }
 }
-#Get-Systeminfo -computerName localhost, localhost -errorLog
+Get-DSSysteminfo -computerName localhost
