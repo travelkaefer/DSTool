@@ -1,2 +1,2 @@
 # DSTool
-Fetches basic system information via WMI on Windows.
+Fetches basic system information via Windows Management Instrumentation (WMI).
