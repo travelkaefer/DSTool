@@ -1,7 +1,7 @@
 ################################################################
 # Author: Daniel Schwensen
 # E-Mail: daniel.schwensen@nielsen.com
-#
+#askfahskdfhaskdhkf
 #
 #
 # Chapter 7.1
@@ -30,16 +30,17 @@ C:\Retry.txt.
 .EXAMPLE
  Get-DSSystemInfo -ComputerName SERVER1,SERVER2
 #>
-    [CmdletBinding()] 
+    [CmdletBinding()]
     param(
         [Parameter(Mandatory = $true)]
         [string[] ] $computerName,
 
         [string] $errorLog = "c:\test.txt"
-        
+
     )
-    
-    BEGIN { Write-Output "Log name is $errorLog"}
+
+    BEGIN { Write-Output "Log name is $errorLog"
+    }
 
     PROCESS {
         foreach ($computer in $computerName) {
@@ -55,16 +56,16 @@ C:\Retry.txt.
                 'SPVersion'           = $os.servicepackmajorverison;
                 'BIOSSerial'          = $bios.serialnumber;
                 'Manufacturer'        = $comp.manufacturer;
-                'Model'               = $comp.model 
+                'Model'               = $comp.model
             }
             $obj = New-Object -TypeName psobject -Property $props
 
             Write-Output $obj
         }
-       
+
     }
 
-    END {}
+    END {
+    }
 }
-#Get-Systeminfo -computerName localhost, localhost -errorLog 
-    
+#Get-Systeminfo -computerName localhost, localhost -errorLog
