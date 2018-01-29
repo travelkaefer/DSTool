@@ -21,12 +21,14 @@ function Get-DSSysteminfo() {
             $bios = gwmi -Class Win32_BIOS `
                 -ComputerName $computer
 
-            $props = @{'ComputerName' = $computer;
-                'OsVersion'           = $os.version;
-                'SPVersion'           = $os.servicepackmajorverison;
-                'BIOSSerial'          = $bios.serialnumber;
-                'Manufacturer'        = $comp.manufacturer;
-                'Model'               = $comp.model
+            $props = [ordered]@{'ComputerName' = $computer;
+                'OsVersion' = $os.version;
+                'OsName' = $os.caption;
+                'OsArchitecture' = $os.OSArchitecture;
+                'SPVersion' = $os.servicepackmajorverison;
+                'BIOS' = $bios.Description;
+                'Manufacturer' = $comp.manufacturer;
+                'Model' = $comp.model
             }
             $obj = New-Object -TypeName psobject -Property $props
 
